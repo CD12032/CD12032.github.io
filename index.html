@@ -1,106 +1,99 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-<style>
-		* { margin: 0; padding: 0; }
-		
-		html { 
-			background: url(http://picview.info/download/20150730/background-spots-shadows-dim-3840x2160.jpg) no-repeat center center fixed; 
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			-o-background-size: cover;
-			background-size: cover;
-		}
-		
-		#page-wrap { width: 400px; margin: 50px auto; padding: 20px; background: white; -moz-box-shadow: 0 0 20px black; -webkit-box-shadow: 0 0 20px black; box-shadow: 0 0 20px black; }
-		p { font: 15px/2 Georgia, Serif; margin: 0 0 30px 0; text-indent: 40px; }
-    
-        
-	</style>
+<!DOCTYPE html>
+<html>
 <head>
-<title>
-Corey's Calculations | Welcome
-</title>
-<link rel="stylesheet" href="main.css" type="text/css" />
-<style>
-body {margin-top:0px;
-      margin-left:0px;
-      margin-right:0px;
-}  
-#footer{
-	background-color: white;
-	padding: 10px 0px 0px 0px;
-	text-align: center;	
-    position: fixed;
-    bottom:0px;
-    width:100%;
-}	
+  <meta charset="utf-8">
+  <title>2048 | Corey Dennelly</title>
 
-	#footer div.container{
-		max-width: fixed;
-	}
-	
-	#footer h2{
-		margin-bottom: 40px;
-	}
-	
-	#footer p{
-		font-size: 11px;
-		letter-spacing: 1px;
-		font-family: 'NovecentowideLightBold', 'Helvetica', 'Arial', sans-serif;		
-		line-height: 0px;
-	}
-	
-	#footer a{
-		text-decoration: none;
-	}
-	
-	#footer a:hover{
-		color: #61e69d !important;	
-		-webkit-transition: color 0.2s ease;
-		-moz-transition: color 0.2s ease;
-		-ms-transition: color 0.2s ease;
-		-o-transition: color 0.2s ease;
-		transition: color 0.2s ease;		
-	}	
-</style>
+  <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone 5+ -->
+  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x920.png"  media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone, retina -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
 </head>
-<style>
-body { font: 13px sans-serif; }
-    </style>
-<div id="page1">
-    <a id="Ergonomics" class="smooth"></a>
 <body>
-	<div id="navigation">
-		<a href="index.html">Welcome</a>
-		<a href="calculator.html">Calculator</a>
-		<a href="about.html">About Us</a>
-		<a href="references.html">References</a>
-	</div>
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">2048</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
 
-<section>
-<div style="padding:20px;margin-top:30px;margin-left:50px;margin-right:50px;margin-bottom:150px;height:150px;">
-    <br>
-    <br>
-  <u><center><h1>
-    Welcome to my website!
-    </h1></center></u>
- <div class="boxed">
-   <center>
-       <p>Here, you'll find a simple calculator coeed by javascript to assist in basic calculations.
-        </p>
-</div>
-</div>
-    </section>
-</body>
-    
-</div>
-<body>	
-    <section id="footer">
-		<div class="container">
-			<p class="contact">Copyright &copy; Corey Dennelly 2016. All rights reserved.</p>
-            <p class="contact">All copyright information can be found by clicking <a href="/references.html">HERE</a>.</p>
+    <div class="above-game">
+      <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
+      <a class="restart-button">New Game</a>
+    </div>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+	        <a class="keep-playing-button">Keep Playing</a>
+          <a class="retry-button">Play Again</a>
         </div>
-		
-    </section>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
+    </div>
+
+    <p class="game-explanation">
+      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
+    </p>
+    <hr>
+    <p>
+    <strong class="important">Note:</strong> This site is the official version of 2048. sites are derivatives or fakes, and should be used with caution.
+    </p>
+    <hr>
+    <p>
+    Created by <a href="http://okoru.net/" target="_blank">Corey Dennelly.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio.</a>
+    </p>
+  </div>
+
+  <script src="js/bind_polyfill.js"></script>
+  <script src="js/classlist_polyfill.js"></script>
+  <script src="js/animframe_polyfill.js"></script>
+  <script src="js/keyboard_input_manager.js"></script>
+  <script src="js/html_actuator.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/local_storage_manager.js"></script>
+  <script src="js/game_manager.js"></script>
+  <script src="js/application.js"></script>
 </body>
 </html>
